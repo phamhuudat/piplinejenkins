@@ -1,0 +1,64 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/macbookpro/Projects/APIDemo/APIDemo/APIDemo.csproj": {}
+  },
+  "projects": {
+    "/Users/macbookpro/Projects/APIDemo/APIDemo/APIDemo.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/macbookpro/Projects/APIDemo/APIDemo/APIDemo.csproj",
+        "projectName": "APIDemo",
+        "projectPath": "/Users/macbookpro/Projects/APIDemo/APIDemo/APIDemo.csproj",
+        "packagesPath": "/Users/macbookpro/.nuget/packages/",
+        "outputPath": "/Users/macbookpro/Projects/APIDemo/APIDemo/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/macbookpro/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://nuget.devexpress.com/SRg3i3ZrNqtzU4rh85otKXuk56nz3YQPeOp4ez6NvKsBVGAFSG/api": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100-rc.1.21424.1/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

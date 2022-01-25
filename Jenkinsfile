@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools{
-       .NET  'my-netsdk' 
+       netsdk 'my-netsdk' 
     }
     environment {
         DOCKERHUB_CREDENTIALS=credentials('dockerhub')

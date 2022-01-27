@@ -11,7 +11,7 @@ pipeline {
         stage('build'){
            steps{
                echo 'Building image..'
-               sh 'docker build -t datbk58/apidemo:1.1 .'
+               sh 'docker build -t datbk58/apidemo:1.1 Dockerfile.'
             }
          }
          stage('Pushing image') {

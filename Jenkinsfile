@@ -14,7 +14,7 @@ pipeline {
            steps{
                echo 'Building image..'
                sh 'docker build -t datbk58/apidemo:1.4 -f Dockerfile .'
-               echo '$NAME'
+               sh 'echo $NAME'
             }
          }
          stage('Pushing image') {
@@ -23,6 +23,7 @@ pipeline {
                 sh 'echo $DOCKERHUB_CREDENTIALS'
                 sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
                 sh 'docker push datbk58/apidemo:1.4'
+                sh 'echo $ADDRESS'
                 
             }
         }

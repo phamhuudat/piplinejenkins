@@ -6,12 +6,15 @@ pipeline {
     }
     environment {
         DOCKERHUB_CREDENTIALS=credentials('dockerhub')
+        NAME='PHAM Dat'
+        ADDRESS='VIET NAM'
     }
     stages {
         stage('build'){
            steps{
                echo 'Building image..'
-               sh 'docker build -t datbk58/apidemo:1.1 -f Dockerfile .'
+               sh 'docker build -t datbk58/apidemo:1.3 -f Dockerfile .'
+               echo '$NAME'
             }
          }
          stage('Pushing image') {
@@ -25,8 +28,9 @@ pipeline {
         }
         stage('Deploying and Cleaning') {
             steps {
+                echo '$ADDRESS'
                 echo 'Deploying and cleaning'
-                sh 'docker image rm datbk58/apidemo:1.1 || echo "this image does not exist" '
+                sh 'docker image rm datbk58/apidemo:1.3 || echo "this image does not exist" '
                 sh 'docker container stop my-demo-apidemo || echo "this container does not exist" '
                 sh 'docker network create jenkins || echo "this network exists"'
                 sh 'echo y | docker container prune '

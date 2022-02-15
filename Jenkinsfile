@@ -36,7 +36,7 @@ pipeline {
                 sh 'docker network create jenkins || echo "this network exists"'
                 sh 'echo y | docker container prune '
                 sh 'echo y | docker image prune'
-                sh 'docker container run -d --rm --name my-demo-apidemo -p 8081:8080 --network jenkins datbk58/apidemo:1.0'
+                sh 'docker container run -d --rm --name my-demo-apidemo -p 8081:5001 --network jenkins datbk58/apidemo:1.4'
             }
         }
         

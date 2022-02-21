@@ -14,7 +14,7 @@ pipeline {
            steps{
                echo 'Building image..'
                sh 'docker build -t datbk58/apidemo:1.7 -f Dockerfile .'
-               sh 'echo $NAME'
+               echo '${env.NAME}'
             }
          }
          stage('Pushing image') {
@@ -29,7 +29,7 @@ pipeline {
         }
         stage('Deploying and Cleaning') {
             steps {
-                echo '$ADDRESS'
+                echo '${env.ADDRESS}'
                 echo 'Deploying and cleaning'
                 sh 'docker image rm datbk58/apidemo:1.7 || echo "this image does not exist" '
                 sh 'docker container stop my-demo-apidemo || echo "this container does not exist" '

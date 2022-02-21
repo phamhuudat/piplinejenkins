@@ -4,7 +4,6 @@ pipeline {
     tools{
        dotnetsdk 'my-netsdk' 
     }
-    param
     environment {
         DOCKERHUB_CREDENTIALS=credentials('dockerhub')
         NAME='PHAM Dat'

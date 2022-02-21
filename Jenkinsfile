@@ -4,6 +4,19 @@ pipeline {
     tools{
        dotnetsdk 'my-netsdk' 
     }
+     parameters {
+        string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+
+        text(name: 'BIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
+
+        booleanParam(name: 'TOGGLE', defaultValue: true, description: 'Toggle this value')
+
+        choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
+
+        password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
+
+        string(name: 'MYNAME', defaultValue: 'Dat', description: 'my name is Dat')
+    }
     environment {
         DOCKERHUB_CREDENTIALS=credentials('dockerhub')
         NAME='PHAM Dat'
@@ -12,6 +25,16 @@ pipeline {
     stages {
         stage('build'){
            steps{
+               echo "Hello ${params.PERSON}"
+
+               echo "Biography: ${params.BIOGRAPHY}"
+
+               echo "Toggle: ${params.TOGGLE}"
+
+               echo "Choice: ${params.CHOICE}"
+
+               echo "Password: ${params.PASSWORD}"
+               echo "Myname is : ${params.MYNAME}"
                echo 'Building image..'
                sh 'docker build -t datbk58/apidemo:1.7 -f Dockerfile .'
                echo "${env.NAME}"

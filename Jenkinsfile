@@ -24,6 +24,11 @@ pipeline {
     }
     stages {
         stage('build'){
+            agent{
+                docker{
+                    image 'alpine:latest'
+                }
+            }
            steps{
                echo "Hello ${params.PERSON}"
 

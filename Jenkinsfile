@@ -24,11 +24,6 @@ pipeline {
     }
     stages {
         stage('build'){
-            agent{
-                docker{
-                    image 'alpine:latest'
-                }
-            }
            steps{
                echo "Hello ${params.PERSON}"
 
@@ -63,7 +58,7 @@ pipeline {
                 sh 'docker network create jenkins || echo "this network exists"'
                 sh 'echo y | docker container prune '
                 sh 'echo y | docker image prune'
-                sh 'docker container run -d --name my-demo-apidemo -p 8082:80 --network host datbk58/apidemo:1.7'
+                sh 'docker container run -d --name my-demo-apidemo -p 8082:80 --network jenkins datbk58/apidemo:1.7'
             }
         }
         

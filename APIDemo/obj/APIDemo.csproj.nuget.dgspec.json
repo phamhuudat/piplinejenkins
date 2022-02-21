@@ -1,31 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "/Users/macbookpro/Projects/APIDemo/APIDemo/APIDemo.csproj": {}
+    "D:\\Users\\PhamHuuDat\\Source\\Repos\\phamhuudat\\piplinejenkins\\APIDemo\\APIDemo.csproj": {}
   },
   "projects": {
-    "/Users/macbookpro/Projects/APIDemo/APIDemo/APIDemo.csproj": {
+    "D:\\Users\\PhamHuuDat\\Source\\Repos\\phamhuudat\\piplinejenkins\\APIDemo\\APIDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/macbookpro/Projects/APIDemo/APIDemo/APIDemo.csproj",
+        "projectUniqueName": "D:\\Users\\PhamHuuDat\\Source\\Repos\\phamhuudat\\piplinejenkins\\APIDemo\\APIDemo.csproj",
         "projectName": "APIDemo",
-        "projectPath": "/Users/macbookpro/Projects/APIDemo/APIDemo/APIDemo.csproj",
-        "packagesPath": "/Users/macbookpro/.nuget/packages/",
-        "outputPath": "/Users/macbookpro/Projects/APIDemo/APIDemo/obj/",
+        "projectPath": "D:\\Users\\PhamHuuDat\\Source\\Repos\\phamhuudat\\piplinejenkins\\APIDemo\\APIDemo.csproj",
+        "packagesPath": "C:\\Users\\PhamHuuDat\\.nuget\\packages\\",
+        "outputPath": "D:\\Users\\PhamHuuDat\\Source\\Repos\\phamhuudat\\piplinejenkins\\APIDemo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/macbookpro/.config/NuGet/NuGet.Config"
+          "C:\\Users\\PhamHuuDat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
           "https://nuget.devexpress.com/SRg3i3ZrNqtzU4rh85otKXuk56nz3YQPeOp4ez6NvKsBVGAFSG/api": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -36,8 +38,18 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.14.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -56,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100-rc.1.21424.1/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

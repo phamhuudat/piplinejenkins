@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { node { label 'ubuntu' } }
 
     tools{
        dotnetsdk 'my-netsdk' 
@@ -50,7 +50,7 @@ pipeline {
             }
         }
         stage('Deploying and Cleaning') {
-            agent { node { label 'ubuntu' } }
+            
             steps {
                 echo "${env.ADDRESS}"
                 echo 'Deploying and cleaning'

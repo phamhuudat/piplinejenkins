@@ -63,7 +63,7 @@ pipeline {
                 sh 'docker network create jenkins || echo "this network exists"'
                 sh 'echo y | docker container prune '
                 sh 'echo y | docker image prune'
-                sh 'sudo docker container run -d --name my-demo-apidemo -p 8082:80 --network jenkins datbk58/apidemo:1.7'
+                sh 'docker container run -d --name my-demo-apidemo -p 8082:80 --network jenkins datbk58/apidemo:1.7'
             }
         }
         

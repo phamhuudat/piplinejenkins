@@ -50,6 +50,11 @@ pipeline {
             }
         }
         stage('Deploying and Cleaning') {
+            agent{
+                node{
+                    label 'ubuntu'
+                }
+            }
             steps {
                 echo "${env.ADDRESS}"
                 echo 'Deploying and cleaning'
@@ -58,7 +63,7 @@ pipeline {
                 sh 'docker network create jenkins || echo "this network exists"'
                 sh 'echo y | docker container prune '
                 sh 'echo y | docker image prune'
-                sh 'docker container run -d --name my-demo-apidemo -p 8082:80 --network jenkins datbk58/apidemo:1.7'
+                sh 'sudo docker container run -d --name my-demo-apidemo -p 8082:80 --network jenkins datbk58/apidemo:1.7'
             }
         }
         

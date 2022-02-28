@@ -1,5 +1,6 @@
 pipeline {
-    agent { node { label 'ubuntu' } }
+    //agent { node { label 'ubuntu' } }
+    agent any
 
     tools{
        dotnetsdk 'my-netsdk' 

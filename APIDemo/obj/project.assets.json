@@ -295,28 +295,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\PhamHuuDat\\.nuget\\packages\\": {}
+    "/Users/macbookpro/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Users\\PhamHuuDat\\Source\\Repos\\phamhuudat\\piplinejenkins\\APIDemo\\APIDemo.csproj",
+      "projectUniqueName": "/Users/macbookpro/Projects/piplinejenkins/APIDemo/APIDemo.csproj",
       "projectName": "APIDemo",
-      "projectPath": "D:\\Users\\PhamHuuDat\\Source\\Repos\\phamhuudat\\piplinejenkins\\APIDemo\\APIDemo.csproj",
-      "packagesPath": "C:\\Users\\PhamHuuDat\\.nuget\\packages\\",
-      "outputPath": "D:\\Users\\PhamHuuDat\\Source\\Repos\\phamhuudat\\piplinejenkins\\APIDemo\\obj\\",
+      "projectPath": "/Users/macbookpro/Projects/piplinejenkins/APIDemo/APIDemo.csproj",
+      "packagesPath": "/Users/macbookpro/.nuget/packages/",
+      "outputPath": "/Users/macbookpro/Projects/piplinejenkins/APIDemo/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\PhamHuuDat\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/macbookpro/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://nuget.devexpress.com/SRg3i3ZrNqtzU4rh85otKXuk56nz3YQPeOp4ez6NvKsBVGAFSG/api": {}
+        "/usr/local/share/dotnet/library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
@@ -361,7 +359,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.102/RuntimeIdentifierGraph.json"
       }
     }
   }

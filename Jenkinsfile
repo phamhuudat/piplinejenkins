@@ -14,7 +14,6 @@ pipeline {
         stage('Run app'){
            steps{
                echo "Run app ${params.IMAGE_NAME}:${params.IMAGE_TAG}"
-               sh "cd APIDemo"
                sh "ls"
                sh "dotnet restore APIDemo/APIDemo.csproj"
                sh "dotnet publish APIDemo/APIDemo.csproj -c Release -o APIDemo/app/publish"

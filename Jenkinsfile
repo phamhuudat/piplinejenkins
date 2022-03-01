@@ -15,8 +15,7 @@ pipeline {
            steps{
                echo "Run app ${params.IMAGE_NAME}:${params.IMAGE_TAG}"
                sh "ls"
-               sh "sudo apt-get update -y"
-               sh "sudo apt-get install -y libicu-dev"
+               sh "dotnet --version"
                sh "dotnet restore APIDemo/APIDemo.csproj"
                sh "dotnet publish APIDemo/APIDemo.csproj -c Release -o APIDemo/app/publish"
             }

@@ -19,17 +19,16 @@ pipeline {
             }
            steps{
                echo "Run app ${params.IMAGE_NAME}:${params.IMAGE_TAG}"
-               sh "cd APIDemo"
-               sh "dotnet restore APIDemo.csproj"
-               sh "dotnet publish APIDemo.csproj -c Release -o app/publish"
-               stash includes : 'app/publish/*', name: 'app'
+               sh "dotnet restore APIDemo/APIDemo.csproj"
+               sh "dotnet publish APIDemo/APIDemo.csproj -c Release -o APIDemo/app/publish"
+               stash includes : 'APIDemo/app/publish/*', name: 'app'
             }
          }
          stage("Build image"){
              steps{
                  unstash 'app' 
                  sh 'ls -la'
-                 sh 'ls -la app/publish'
+                 sh 'ls -la APIDemo/app/publish'
                  sh "docker build -t datbk58/${params.IMAGE_NAME}:${params.IMAGE_TAG} -f Dockerfile ."
              }
          }

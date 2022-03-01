@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\PhamHuuDat\\Source\\Repos\\phamhuudat\\piplinejenkins\\APIDemo\\APIDemo.csproj": {}
+    "D:\\Users\\PhamHuuDat\\Source\\Repos\\piplinejenkins\\APIDemo\\APIDemo.csproj": {}
   },
   "projects": {
-    "D:\\Users\\PhamHuuDat\\Source\\Repos\\phamhuudat\\piplinejenkins\\APIDemo\\APIDemo.csproj": {
+    "D:\\Users\\PhamHuuDat\\Source\\Repos\\piplinejenkins\\APIDemo\\APIDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\PhamHuuDat\\Source\\Repos\\phamhuudat\\piplinejenkins\\APIDemo\\APIDemo.csproj",
+        "projectUniqueName": "D:\\Users\\PhamHuuDat\\Source\\Repos\\piplinejenkins\\APIDemo\\APIDemo.csproj",
         "projectName": "APIDemo",
-        "projectPath": "D:\\Users\\PhamHuuDat\\Source\\Repos\\phamhuudat\\piplinejenkins\\APIDemo\\APIDemo.csproj",
+        "projectPath": "D:\\Users\\PhamHuuDat\\Source\\Repos\\piplinejenkins\\APIDemo\\APIDemo.csproj",
         "packagesPath": "C:\\Users\\PhamHuuDat\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\PhamHuuDat\\Source\\Repos\\phamhuudat\\piplinejenkins\\APIDemo\\obj\\",
+        "outputPath": "D:\\Users\\PhamHuuDat\\Source\\Repos\\piplinejenkins\\APIDemo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PhamHuuDat\\AppData\\Roaming\\NuGet\\NuGet.Config",

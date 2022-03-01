@@ -1,5 +1,5 @@
 pipeline {
-    agent { node { label 'ubuntu' } }
+    agent any
     tools{
        dotnetsdk 'my-netsdk' 
     }
@@ -12,15 +12,24 @@ pipeline {
     }
     stages {
         stage('Run app'){
+            agent{
+                docker{
+                    image 'mcr.microsoft.com/dotnet/sdk:6.0'
+                }
+            }
            steps{
                echo "Run app ${params.IMAGE_NAME}:${params.IMAGE_TAG}"
                sh "cd APIDemo"
                sh "dotnet restore ./APIDemo.csproj"
                sh "dotnet publish ./APIDemo.csproj -c Release -o ./app/publish"
+               stash includes : './app/publish/*', name: 'app'
             }
          }
          stage("Build image"){
              steps{
+                 unstash 'app' 
+                 sh 'ls -la'
+                 sh 'ls -la app/publish'
                  sh "docker build -t datbk58/${params.IMAGE_NAME}:${params.IMAGE_TAG} -f Dockerfile ."
              }
          }

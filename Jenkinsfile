@@ -16,8 +16,8 @@ pipeline {
                echo "Run app ${params.IMAGE_NAME}:${params.IMAGE_TAG}"
                sh "cd APIDemo"
                sh "ls"
-               sh "dotnet restore APIDemo.csproj"
-               sh "dotnet publish APIDemo.csproj -c Release -o app/publish"
+               sh "dotnet restore ./APIDemo.csproj"
+               sh "dotnet publish ./APIDemo.csproj -c Release -o ./app/publish"
             }
          }
          stage("Build image"){

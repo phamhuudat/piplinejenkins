@@ -14,9 +14,9 @@ pipeline {
     }
     stages {
         stage('Run app'){
-            // environment {
-            //     HOME = '/tmp'
-            // }            
+            environment {
+                HOME = '/tmp'
+            }            
             agent{
                 docker{
                     image 'mcr.microsoft.com/dotnet/sdk:6.0'

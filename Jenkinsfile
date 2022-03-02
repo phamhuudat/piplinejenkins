@@ -9,10 +9,14 @@ pipeline {
     }
     environment {
         DOCKERHUB_CREDENTIALS=credentials('dockerhub')
+        NAME = 'PHẠM HỮU ĐẠT'
+        ADDRESS = 'HÀ NỘI'
     }
     stages {
         stage('Run app'){
            steps{
+               echo "Họ và tên: ${env.NAME}"
+               echo "Địa chỉ: ${env.ADDRESS}"
                echo "Run app ${params.IMAGE_NAME}:${params.IMAGE_TAG}"
                sh "cd APIDemo"
                sh "ls"

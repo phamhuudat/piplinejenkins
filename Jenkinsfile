@@ -20,7 +20,6 @@ pipeline {
             agent{
                 docker{
                     image 'mcr.microsoft.com/dotnet/sdk:6.0'
-                    reuseNode false
                 }
             }
            steps{
@@ -28,15 +27,15 @@ pipeline {
                echo "Địa chỉ: ${env.ADDRESS}"
                echo "Run app ${params.IMAGE_NAME}:${params.IMAGE_TAG}"
                sh "dotnet restore APIDemo/APIDemo.csproj"
-               sh "dotnet publish APIDemo/APIDemo.csproj -c Release -o app/publish --no-cache"
-               stash includes : 'app/publish/*', name: 'app'
+               sh "dotnet publish APIDemo/APIDemo.csproj -c Release -o APIDemo/app/publish --no-cache"
+               stash includes : 'APIDemo/app/publish/*', name: 'app'
             }
          }
          stage("Build image"){
              steps{
                  unstash 'app' 
                  sh 'ls -la'
-                 sh 'ls -la app/publish'
+                 sh 'ls -la APIDemo/app/publish'
                  sh "docker build -t datbk58/${params.IMAGE_NAME}:${params.IMAGE_TAG} -f Dockerfile ."
              }
          }

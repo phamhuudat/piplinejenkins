@@ -26,9 +26,8 @@ pipeline {
                echo "Họ và tên: ${env.NAME}"
                echo "Địa chỉ: ${env.ADDRESS}"
                echo "Run app ${params.IMAGE_NAME}:${params.IMAGE_TAG}"
-               sh "dotnet clean APIDemo/APIDemo.csproj"
                sh "dotnet restore APIDemo/APIDemo.csproj"
-               sh "dotnet publish APIDemo/APIDemo.csproj -c Release -o APIDemo/app/publish"
+               sh "dotnet publish APIDemo/APIDemo.csproj -c Release -o APIDemo/app/publish --no-cache"
                stash includes : 'APIDemo/app/publish/*', name: 'app'
             }
          }

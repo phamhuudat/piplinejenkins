@@ -9,6 +9,8 @@ pipeline {
     }
     environment {
         DOCKERHUB_CREDENTIALS=credentials('dockerhub')
+        NAME = 'PHAM HUU DAT'
+        ADDRESS = 'HA NOI'
     }
     stages {
         stage('Run app'){
@@ -21,6 +23,8 @@ pipeline {
                 }
             }
            steps{
+               echo "Họ và tên: ${env.NAME}"
+               echo "Địa chỉ: ${env.ADDRESS}"
                echo "Run app ${params.IMAGE_NAME}:${params.IMAGE_TAG}"
                sh "dotnet restore APIDemo/APIDemo.csproj"
                sh "dotnet publish APIDemo/APIDemo.csproj -c Release -o APIDemo/app/publish"

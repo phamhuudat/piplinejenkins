@@ -20,7 +20,7 @@ pipeline {
             agent{
                 docker{
                     image 'mcr.microsoft.com/dotnet/sdk:6.0'
-                    reuseNode true
+                    reuseNode false
                 }
             }
            steps{

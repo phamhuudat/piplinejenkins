@@ -17,6 +17,7 @@ pipeline {
                 sh "chmod 12011995Xmen.pem"
                 sh "cat hosts"
                 sh "ansible-playbook play-book.yaml"
+            }
         }
         // stage('Run app'){
         //    steps{

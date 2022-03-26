@@ -14,7 +14,7 @@ pipeline {
         stage('ansible'){
             steps{
                 echo "Run ansible"
-                sh "chmod 12011995Xmen.pem"
+                sh "chmod 400 12011995Xmen.pem"
                 sh "cat hosts"
                 sh "ansible-playbook play-book.yaml"
             }

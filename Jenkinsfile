@@ -11,7 +11,7 @@ pipeline {
     //     DOCKERHUB_CREDENTIALS=credentials('dockerhub')
     // }
     stages {
-        stages('ansible'){
+        stage('ansible'){
             steps{
                 echo "Run ansible"
                 sh "chmod 12011995Xmen.pem"

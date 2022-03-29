@@ -17,7 +17,7 @@ pipeline {
                 sh "chmod 400 12011995Xmen.pem"
                 sh "cat hosts"
                 sh "cat play-book.yaml"
-                ansiblePlayboolk become: true, crendentialsId: 'agent-credential', installation: 'my_ansible', inventory: 'hosts', playbook: 'play-book.yaml'
+                ansiblePlaybook become: true, credentialsId: 'agent-credential', installation: 'my_ansible', inventory: 'hosts', playbook: 'play-book.yaml'
             }
         }
         // stage('Run app'){

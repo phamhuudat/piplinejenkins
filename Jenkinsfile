@@ -16,7 +16,7 @@ pipeline {
                 echo "Run ansible"
                 sh "chmod 400 12011995Xmen.pem"
                 sh "cat hosts"
-                sh "cat play-book.yaml"
+                sh "cat ansible-book.yaml"
                 ansiblePlaybook become: true, credentialsId: 'agent-credential', installation: 'my_ansible', inventory: 'hosts', playbook: 'play-book.yaml'
             }
         }

@@ -1,4 +1,4 @@
-name: ansible-playbook
+- name: ansible-playbook
   hosts: aws-demo
   tasks:
    - name: create a file 

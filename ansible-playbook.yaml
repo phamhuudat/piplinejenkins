@@ -5,7 +5,10 @@
      shell: sudo apt update 
             sudo apt install git
             git --version
-   - name: create a file 
-     command: touch /home/ubuntu/newfile
-   - name: create a new directory
-     command: mkdir /home//newdirectory
+   - name: setting java
+     shell: sudo apt install default-jre
+            java -version
+  #  - name: create a file 
+  #    command: touch /home/ubuntu/newfile
+  #  - name: create a new directory
+  #    command: mkdir /home//newdirectory

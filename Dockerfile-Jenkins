@@ -15,6 +15,7 @@ RUN chmod +x dotnet-install.sh
 RUN ./dotnet-install.sh -c 6.0 --install-dir /usr/share/dotnet
 RUN apt-get install libicu-dev -y
 RUN apt-get install ansible -y
+RUN apt-get install sshpass
 USER jenkins
 COPY 12011995Xmen.pem /home/jenkins/.ssh
 # RUN jenkins-plugin-cli --plugins "blueocean:1.25.2 docker-workflow:1.26"

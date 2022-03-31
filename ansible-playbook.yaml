@@ -1,7 +1,11 @@
 - name: ansible-playbook
   hosts: aws-demo
   tasks:
+   - name: setting git
+     shell: sudo apt update \
+     sudo apt install git \
+     git --version
    - name: create a file 
-     command: touch /home/devops2/newfile
+     command: touch /home/ubuntu/newfile
    - name: create a new directory
-     command: mkdir /home/devops2/newdirectory
+     command: mkdir /home//newdirectory
